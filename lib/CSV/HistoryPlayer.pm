@@ -82,30 +82,31 @@ sub _build__reader {
 
     my @lines;
     my $read_line_from_cluster = sub {
-        REDO:
+        REDO: {
 
-        # make sure that we read last line from all cluster files
-        for my $idx (0 .. @cluster_fds - 1) {
-            if (!defined $lines[$idx] && !$cluster_csvs[$idx]->eof) {
-                $lines[$idx] =
-                    $cluster_csvs[$idx]->getline($cluster_fds[$idx]);
+            # make sure that we read last line from all cluster files
+            for my $idx (0 .. @cluster_fds - 1) {
+                if (!defined $lines[$idx] && !$cluster_csvs[$idx]->eof) {
+                    $lines[$idx] =
+                        $cluster_csvs[$idx]->getline($cluster_fds[$idx]);
+                }
             }
-        }
 
-        # we assume that timestamp is the 1st column
-        my @ordered_idx =
-            sort { $lines[$a]->[0] <=> $lines[$b]->[0] }
-            grep { defined $lines[$_] } (0 .. @lines - 1);
-        if (@ordered_idx) {
-            my $idx  = shift @ordered_idx;
-            my $line = $lines[$idx];
-            my $file = $cluser_files[$idx];
-            $self->_current_data([$file, $line]);
-            $lines[$idx] = undef;
-        } else {
-            if ($cluster_idx < @$clusters - 1) {
-                $open_cluster->(++$cluster_idx);
-                goto REDO;
+            # we assume that timestamp is the 1st column
+            my @ordered_idx =
+                sort { $lines[$a]->[0] <=> $lines[$b]->[0] }
+                grep { defined $lines[$_] } (0 .. @lines - 1);
+            if (@ordered_idx) {
+                my $idx  = shift @ordered_idx;
+                my $line = $lines[$idx];
+                my $file = $cluser_files[$idx];
+                $self->_current_data([$file, $line]);
+                $lines[$idx] = undef;
+            } else {
+                if ($cluster_idx < @$clusters - 1) {
+                    $open_cluster->(++$cluster_idx);
+                    goto REDO;
+                }
             }
         }
     };
