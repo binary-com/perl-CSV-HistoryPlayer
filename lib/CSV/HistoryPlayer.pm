@@ -5,7 +5,8 @@ use Moo;
 use Path::Tiny;
 use Text::CSV;
 
-use strictures 2;
+use strict;
+use warnings;
 use namespace::clean;
 
 our $VERSION = '0.01';

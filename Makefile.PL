@@ -8,7 +8,7 @@ WriteMakefile(
     VERSION_FROM     => 'lib/CSV/HistoryPlayer.pm',
     ABSTRACT         => 'Plays scattered CSV files with historic data',
     LICENSE          => 'artistic_2',
-    MIN_PERL_VERSION => '5.8.0',
+    MIN_PERL_VERSION => '5.10.0',
     clean            => {FILES => 'CSV-HistoryPlayer-*'},
     (
         eval { ExtUtils::MakeMaker->VERSION(6.64) }
