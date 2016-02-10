@@ -49,7 +49,7 @@ sub _build_files {
             for my $c ($dir->children) {
                 push @dirs_queue, $c if (-d $c);
                 push @files, $c
-                    if ($c =~ /\.csv$/i && -s $c && -r $c && -f $c);
+                    if ($c =~ /\.csv$/i && -s -r -f _);
             }
         }
     }
