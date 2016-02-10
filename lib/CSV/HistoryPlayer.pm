@@ -21,6 +21,18 @@ CSV::HistoryPlayer - Plays scattered CSV files with historic data
 
 0.01
 
+
+=head STATUS
+
+=begin HTML
+
+<p>
+    <a href="https://travis-ci.org/binary-com/perl-CSV-HistoryPlayer"><img src="https://travis-ci.org/binary-com/perl-CSV-HistoryPlayer.svg" /></a>
+</p>
+
+=end HTML
+
+
 =head1 SYNOPSYS
 
   use CSV::HistoryPlayer;
