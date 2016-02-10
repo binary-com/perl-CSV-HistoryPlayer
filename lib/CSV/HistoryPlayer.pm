@@ -22,7 +22,7 @@ CSV::HistoryPlayer - Plays scattered CSV files with historic data
 0.01
 
 
-=head STATUS
+=head1 STATUS
 
 =begin HTML
 
