@@ -47,7 +47,7 @@ subtest "find CSV files" => sub {
     # another way to accomplish the same
     my $player_2 = CSV::HistoryPlayer->new(
       root_dir    => $tmp_dir,
-      files_maper => sub {
+      files_mapper => sub {
         my $files = shift;
         return [ reverse sort grep { $_ !~ /NON_NEEDED/} @$files ];
       }

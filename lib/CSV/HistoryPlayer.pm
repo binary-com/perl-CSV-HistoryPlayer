@@ -22,7 +22,7 @@ has 'dir_filter' => (
         return sub { 1 }
     });
 
-has 'files_maper' => (
+has 'files_mapper' => (
     is      => 'ro',
     default => sub {
         return sub {
@@ -53,7 +53,7 @@ sub _build_files {
             }
         }
     }
-    my $sorted_files = $self->files_maper->(\@files);
+    my $sorted_files = $self->files_mapper->(\@files);
     return $sorted_files;
 }
 
