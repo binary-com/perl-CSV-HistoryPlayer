@@ -1,0 +1,5 @@
+lib/CSV/HistoryPlayer.pm
+Makefile.PL
+MANIFEST
+README.md
+t/usage.t
