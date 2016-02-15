@@ -9,7 +9,7 @@ use strict;
 use warnings;
 use namespace::clean;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
@@ -19,7 +19,7 @@ CSV::HistoryPlayer - Plays scattered CSV files with historic data
 
 =head1 VERSION
 
-0.01
+0.02
 
 
 =head1 STATUS
