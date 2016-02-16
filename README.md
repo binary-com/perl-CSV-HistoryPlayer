@@ -4,7 +4,7 @@ CSV::HistoryPlayer - Plays scattered CSV files with historic data
 
 # VERSION
 
-0.01
+0.02
 
 # STATUS
 

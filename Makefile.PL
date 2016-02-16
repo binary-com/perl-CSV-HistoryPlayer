@@ -19,10 +19,11 @@ WriteMakefile(
         "ExtUtils::MakeMaker" => "6.64",
     },
     PREREQ_PM => {
-        "List::MoreUtils" => 0,
-        "Moo"             => 0,
-        "Path::Tiny"      => 0,
-        "Text::CSV"       => 0,
+        "List::MoreUtils"  => 0,
+        "Moo"              => 0,
+        "namespace::clean" => 0,
+        "Path::Tiny"       => 0,
+        "Text::CSV"        => 0,
     },
     TEST_REQUIRES => {
         "Test::More"     => 0,
