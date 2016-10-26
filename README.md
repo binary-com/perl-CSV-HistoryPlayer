@@ -1,4 +1,6 @@
 # NAME
+[![Build Status](https://travis-ci.org/binary-com/perl-CSV-HistoryPlayer.svg?branch=master)](https://travis-ci.org/binary-com/perl-CSV-HistoryPlayer)
+[![codecov](https://codecov.io/gh/binary-com/perl-CSV-HistoryPlayer/branch/master/graph/badge.svg)](https://codecov.io/gh/binary-com/perl-CSV-HistoryPlayer)
 
 CSV::HistoryPlayer - Plays scattered CSV files with historic data
 

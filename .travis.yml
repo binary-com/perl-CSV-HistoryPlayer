@@ -11,6 +11,6 @@ perl:
     - "5.12"
     - "5.10"
 before_install:
-    - "cpanm List::MoreUtils Moo Path::Tiny Text::CSV Test::More Test::Warnings"
+    - "cpanm -qn List::MoreUtils Moo Path::Tiny Text::CSV Test::More Test::Warnings Test::Requires::Git Devel::Cover::Report::Codecov"
 script:
-    perl Makefile.PL && make test
+    perl Makefile.PL && cover -test -report codecov
