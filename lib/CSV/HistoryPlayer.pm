@@ -17,11 +17,6 @@ our $VERSION = '0.02';
 
 CSV::HistoryPlayer - Plays scattered CSV files with historic data
 
-=head1 VERSION
-
-0.02
-
-
 =head1 STATUS
 
 =begin HTML
