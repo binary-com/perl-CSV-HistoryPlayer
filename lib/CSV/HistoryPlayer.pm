@@ -9,7 +9,7 @@ use strict;
 use warnings;
 use namespace::clean;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 NAME
 
@@ -328,7 +328,6 @@ sub poll {
     return $result;
 }
 
-
 =head1 AUTHOR
 
 binary.com, C<< <perl at binary.com> >>
@@ -379,6 +378,5 @@ CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =cut
-
 
 1;
