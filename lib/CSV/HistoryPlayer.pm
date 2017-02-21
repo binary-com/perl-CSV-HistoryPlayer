@@ -9,18 +9,13 @@ use strict;
 use warnings;
 use namespace::clean;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 NAME
 
 =encoding utf8
 
 CSV::HistoryPlayer - Plays scattered CSV files with historic data
-
-=head1 VERSION
-
-0.02
-
 
 =head1 STATUS
 
@@ -333,7 +328,6 @@ sub poll {
     return $result;
 }
 
-
 =head1 AUTHOR
 
 binary.com, C<< <perl at binary.com> >>
@@ -384,6 +378,5 @@ CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =cut
-
 
 1;
