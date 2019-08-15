@@ -28,7 +28,7 @@ CSV::HistoryPlayer - Plays scattered CSV files with historic data
 =end HTML
 
 
-=head1 SYNOPSYS
+=head1 SYNOPSIS
 
   use CSV::HistoryPlayer;
 
